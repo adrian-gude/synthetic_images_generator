@@ -21,7 +21,7 @@ def generate_prompts():
 
 
 def save_prompts(prompts):
-    with open("animal_prompts.json", "w") as f:
+    with open("data/animal_prompts.json", "w") as f:
         json.dump(prompts, f, indent=4)
 
 

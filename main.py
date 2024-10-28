@@ -6,7 +6,7 @@ import os
 
 
 def load_prompts():
-    with open("animal_prompts.json", "r") as f:
+    with open("data/animal_prompts.json", "r") as f:
         return json.load(f)
 
 
