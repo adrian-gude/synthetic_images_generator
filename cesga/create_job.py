@@ -20,7 +20,7 @@ module load python/3.9.9
 #
 #
 source $LUSTRE/.venv/bin/activate
-pip3 install -r $LUSTRE/requirements.txt
+pip3 install -r $LUSTRE/{job_name}/requirements.txt
 echo "Running the script"
 python3 $LUSTRE/{job_name}/main.py
 """
