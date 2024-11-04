@@ -6,12 +6,12 @@ import os
 
 
 def load_prompts():
-    with open("data/animal_prompts.json", "r") as f:
+    with open("/mnt/lustre/scratch/nlsas/home/ulc/ia/alg/synthetic_images_generator/data/animal_prompts.json", "r") as f:
         return json.load(f)
 
 
 def main():
-
+    save_dir = "/mnt/lustre/scratch/nlsas/home/ulc/ia/alg/synthetic_images_generator/jobs/data"
     accelerator = Accelerator(mixed_precision="bf16")
     device = accelerator.device
 
@@ -30,8 +30,8 @@ def main():
         for prompt in batch_prompts:
             with accelerator.autocast():
                 image = pipe(prompt).images[0]
-
-            image_filename = f"data/{prompt.replace(' ', '_')}.jpeg"
+                
+            image_filename = os.path.join(save_dir, f"{prompt.replace(' ', '_')}.jpeg")  
             image.save(image_filename)
 
 
