@@ -50,3 +50,48 @@ python main.py
 
 This command will generate images based on the specified prompt and save them in the output directory.
 
+## Configuration
+
+Customize the behavior of the generator by editing configuration files in the `cesga` or `jobs` directories. These folders contain settings for various aspects of image generation and job management.
+
+## Dependencies
+
+The project relies on several Python libraries, as specified in `requirements.txt`, including:
+
+- `torch`
+- `transformers`
+- `diffusers`
+- `tqdm`
+- `Pillow`
+- `numpy`
+
+Install these with:
+
+````bash
+pip install -r requirements.txt
+````
+## Folder Structure
+
+- `cesga/`: Contains job configurations and templates.
+- `data/`: Directory for storing generated data.
+- `jobs/`: Additional configurations for managing multiple prompt generation tasks.
+- `generate_prompts.py`: Script to generate text prompts.
+- `main.py`: Main script to generate synthetic images.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For issues or feature requests, please open an issue in the GitHub repository.
